@@ -248,15 +248,9 @@ local lock_video = "no"
         end
         
          local settings = data[tostring(target)]['settings']
-	local textrealm = "⚙Group settings⚙\n====================\nLock group name : "..settings.lock_name.."\n➖➖➖➖\nLock group photo : "..settings.lock_photo.."\n➖➖➖➖\nLock group tag : "..lock_tag.."\n➖➖➖➖\nLock group persian(Disable) : "..lock_arabic.."\n➖➖➖➖\nLock group chating : "..lock_chat.."\n➖➖➖➖\nLock group member : "..settings.lock_member.."\n➖➖➖➖\nLock group english  "..lock_eng.."\n➖➖➖➖\n Lock group leave : "..lock_leave.."\n➖➖➖➖\nLock group bad words : "..lock_badw.."\n➖➖➖➖\nLock group ads : "..lock_link.."\n➖➖➖➖\nsticker status : "..lock_sticker.."\n➖➖➖➖\nflood sensitivity : "..NUM_MSG_MAX.."\n➖➖➖➖\nBot protection : "..bots_protection.. "\n➖➖➖➖\n Group Type : Realm\n➖➖➖➖\n BotVersion : 3.0.0 (open soruce)"..tmp
-  local text = "⚙Group settings⚙\n====================\nLock group name : "..settings.lock_name.."\n➖➖➖➖\nLock group photo : "..settings.lock_photo.."\n➖➖➖➖\nLock group tag : "..lock_tag.."\n➖➖➖➖\nLock group persian(Disable) : "..lock_arabic.."\n➖➖➖➖\nLock group chating : "..lock_chat.."\n➖➖➖➖\nLock group member : "..settings.lock_member.."\n➖➖➖➖\nLock group english  "..lock_eng.."\n➖➖➖➖\n Lock group leave : "..lock_leave.."\n➖➖➖➖\nLock group bad words : "..lock_badw.."\n➖➖➖➖\nLock group ads : "..lock_link.."\n➖➖➖➖\nsticker status : "..lock_sticker.."\n➖➖➖➖\nflood sensitivity : "..NUM_MSG_MAX.."\n➖➖➖➖\nBot protection : "..bots_protection.. "\n➖➖➖➖\n Group Type : Normal\n➖➖➖➖\n BotVersion : 3.0.0 (open source)"..tmp
-  if is_realm(msg) then
-  return textrealm
-  else
+  local text = "⚙Group settings⚙\n====================\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group tag : "..lock_tag.."\nLock group persian(Disable) : "..lock_arabic.."\nLock group chating : "..lock_chat.."\nLock group member : "..settings.lock_member.."\nLock group english  "..lock_eng.."\n Lock group leave : "..lock_leave.."\nLock group bad words : "..lock_badw.."\nLock group ads : "..lock_link.."\nsticker status : "..lock_sticker.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection.. "\n Group Type : Normal\n BotVersion : 3.0.0 (open source)"..tmp
   return text
   end
-end
-
 
 local function set_descriptionmod(msg, data, target, about)
   if not is_momod(msg) then
